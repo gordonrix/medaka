@@ -292,9 +292,9 @@ def write_bam(fname, alignments, header, bam=True):
 
 def _read_worker(read, align=True, method='spoa'):
     read.initialize()
-    if read.nseqs > 2:  # skip if there is only one subread
-        for it in range(2):
-            read.poa_consensus(method=method)
+#    if read.nseqs > 2:  # skip if there is only one subread
+#        for it in range(2):
+#            read.poa_consensus(method=method)
     aligns = None
     if align:
         aligns = read.mappy_to_template(
